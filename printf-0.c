@@ -3,6 +3,7 @@
 
 int main()
 {
+	int _printf(const char *format, ...);	
 	
 
 }
