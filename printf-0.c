@@ -6,7 +6,7 @@
  */
 
 /**
- *myprintf -  custom printf function that supports a subsets of
+ *_printf -  custom printf function that supports a subsets of
  *format specifiers.
  *
  * @format: The format stringg.
