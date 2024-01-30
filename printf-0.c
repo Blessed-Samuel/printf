@@ -1,13 +1,29 @@
 #include <stdio.h>
-#include "main.h"
 #include <stdarg.h>
 
-int myprintf(const char *format, ...)
+/*
+ * @brief custom printf function solutions and implementation
+ */
+
+/**
+ *myprintf -  custom printf function that supports a subsets of
+ *format specifiers.
+ *
+ * @format: The format stringg.
+ * @param format the format string.
+ * @...: variable arguments to be formatted according to the
+ * format strings.
+ *
+ * Return: the number of characters printed to the console.
+ */
+
+int _printf(const char *format, ...)
 {
 	va_list args;
-	va_start(args, format);
 
 	int count = 0;
+
+	va_start(args, format);
 
 	while (*format != '\0')
 	{
