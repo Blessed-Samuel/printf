@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 #include <stdarg.h>
 
 int myprintf(const char *format, ...)
