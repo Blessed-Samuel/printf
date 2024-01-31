@@ -28,8 +28,7 @@ int print_char(va_list args, int count)
 
 	while (*str)
 	{
-		count += _putchar(*str);
-		str++;
+		count += _putchar(*str++);
 	}
 
 	return (count);
@@ -50,8 +49,7 @@ int print_str(va_list args, int count)
 
 	while (*str)
 	{
-		count += _putchar(*str);
-		str++;
+		count += _putchar(*str++);
 	}
 
 	return (count);
