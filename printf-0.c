@@ -64,7 +64,6 @@ int print_str(va_list args, int count)
 int print_integer(va_list args, int count)
 {
 	int value = va_arg(args, int);
-
 	count += fprintf(stdout, "%d", value);
 	return (count);
 }
