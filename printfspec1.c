@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * spec_1 - specifier for %d and %i
+ * spec1 - specifier for %d and %i
  * @arg: list of arguments
  * @format: the conversion specifer
  *
  * Return: return the number of characters
  */
 
-int spec_1(va_list arg, const char *format)
+int spec1(va_list arg, const char *format)
 {
 	int count = 0, num;
 	char c = '%';
@@ -77,3 +77,40 @@ int print_num(int num)
 	return (count);
 }
 
+
+/**
+ * print_buffer - allocate buffer and print buffer
+ * @count: number of characters printed
+ * @num: the integer
+ * @i: for the sake of loop
+ * @isNeg: negative num
+ * Return: return num of charavcter printed
+ */
+
+void print_buffer(int count, int num, int i, int isNeg)
+{
+	int j;
+	int *buffer;
+	char digit;
+
+	buffer = malloc(count * sizeof(int));
+
+	if (buffer != NULL)
+	{
+		i = count - 1;
+		while (num != 0)
+		{
+			buffer[i] = num % 10;
+			num /= 10;
+			i--;
+		}
+		if (isNeg < 0)
+			write(1, "-", 1);
+		for (j = 0; j < count; j++)
+		{
+			digit = '0' + buffer[j];
+			write(1, &digit, 1);
+		}
+		free(buffer);
+	}
+}
