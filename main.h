@@ -8,13 +8,15 @@
 #include <stdlib.h>
 #include <limits.h>
 
-int _printf(const char *format, ...);
-int specifier(va_list arg, const char *format);
-int specifier_1(va_list arg, const char *format);
-int print_num(int num);
-void print_buffer(int count, int num, int i, int isNeg);
+#define CHAR_TYPE 1
+#define STRING_TYPE 2
+#define PERCENT_TYPE 3
+#define BINARY_TYPE 5
 
-
+/* Prototypes for handling %d and %i specifiers */
+int _print_deci(const char *format, ...);
+int print_int(va_list args);
+int print_int_helper(int num);
 
 
 #endif
