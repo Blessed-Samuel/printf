@@ -41,6 +41,8 @@ int _printf(const char *format, ...)
 			case '%':
 				count += fprintf(stdout, "%%");
 				break;
+			case 'b':
+				count += fprintf(stdout, "%b", va_arg(args, int));
 			default:
 				fputc('%', stdout);
 				fputc(*format, stdout);
