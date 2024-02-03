@@ -34,8 +34,23 @@ int _printf(const char *format, ...)
 			case 's':
 				count += fprintf(stdout, "%s", va_arg(args, char *));
 				break;
-			case 'b'
+			case 'b':
 				count += fprint(stdout, "%b", va_arg(args, int));
+				break;
+			case 'u':
+				count += fprintf(stdout, "%u", va_arg(args, unsigned int));
+				break;
+			case 'o':
+				count += fprintf(stdout, "%o", va_arg(args, unsigned int));
+				break;
+			case 'x':
+				count += fprintf(stdout, "%x", va_arg(args, unsigned int));
+				break;
+			case 'X':
+				count += fprintf(stdout, "%X", va_arg(args, unsigned int));
+				break;
+			case 'u':
+				count += fprintf(stdout, "%u", va_arg(args, unsigned int));
 				break;
 			case 'd':
 			case 'i':
